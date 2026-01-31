@@ -69,4 +69,30 @@ function zeigeShinyStatus(pokemon) {
     const status = pokemon.istShiny ? "ein Shiny Pokémon ✨" : "kein Shiny Pokémon";
     console.log(`${pokemon.name} ist ${status}.`);
 }
-zeigeShinyStatus(pokedex);
+for (const pokemon of pokedex) {
+    zeigeShinyStatus(pokemon);
+}
+
+function zeigeNurShinyPokemons(pokedex) {
+    for (const pokemon of pokedex) {
+        if (pokemon.istShiny) {
+            zeigePokemon(pokemon);
+        }
+    }
+}
+console.log("=== Nur Shiny Pokemons ==="); 
+zeigeNurShinyPokemons(pokedex);
+
+function zeigePokemonNachTyp(pokedex, gesuchterTyp) {
+    for (const pokemon of pokedex) {
+        if (pokemon.typ === gesuchterTyp) {
+            zeigePokemon(pokemon);
+        }
+    }
+}
+console.log("=== Pokemons vom Typ Feuer ===");
+zeigePokemonNachTyp(pokedex, "Feuer");
+
+
+console.log("=== Pokemons vom Typ Unlicht ===");
+zeigePokemonNachTyp(pokedex, "Unlicht");
