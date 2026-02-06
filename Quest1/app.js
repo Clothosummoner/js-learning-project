@@ -57,3 +57,11 @@ zeigeNurShinyPokemons(pokedex);
 
 console.log("\n=== Pokémon vom Typ Feuer ===");
 zeigePokemonNachTyp(pokedex, "Feuer");
+function fuegeAttackeHinzu(pokemon, neueAttacke) {
+    pokemon.attacken.push(neueAttacke);
+}
+console.log("=== Vor dem Hinzufügen einer neuen Attacke ==="); 
+zeigePokemon(darkrai);
+fuegeAttackeHinzu(darkrai, "Schattenstoß");
+console.log("\n=== Nach dem Hinzufügen einer neuen Attacke ===");
+zeigePokemon(darkrai);
