@@ -68,6 +68,25 @@ function entferneAttacke(pokemon, attacke) {
         return false;
     }
 }
+function pokemonExistiert(pokedex, name) {
+    for (const pokemon of pokedex) {
+        if (pokemon.name === name) {
+            return true;
+        }
+    }
+    return false;
+}
+function fuegePokemonHinzu(pokedex, name, typ, istShiny, attacken) {
+    if (pokemonExistiert(pokedex, name)) {
+        console.log(`Das Pokémon "${name}" existiert bereits im Pokédex.`);
+        return false;
+    } 
+        const neuesPokemon = { name, typ, istShiny, attacken };
+        pokedex.push(neuesPokemon);
+        console.log(`Das Pokémon "${name}" wurde zum Pokédex hinzugefügt.`);
+        return true;
+    
+}
 
 
 // --- Programmstart ---
@@ -80,7 +99,7 @@ zeigeNurShinyPokemons(pokedex);
 console.log("\n=== Pokémon vom Typ Feuer ===");
 zeigePokemonNachTyp(pokedex, "Feuer");
 
-console.log("=== Vor dem Hinzufügen einer neuen Attacke ==="); 
+console.log("\n=== Vor dem Hinzufügen einer neuen Attacke ==="); 
 zeigePokemon(darkrai);
 fuegeAttackeHinzu(darkrai, "Schattenstoß");
 
@@ -95,3 +114,10 @@ entferneAttacke(glurak, "Sonnentag");
 console.log("\n=== Nach dem Entfernen einer Attacke ===");
 zeigePokemon(glurak);
 entferneAttacke(glurak, "Sonnentag");
+console.log("\n=== Vor dem Hinzufügen eines neuen Pokémon ===");
+zeigeAllePokemons(pokedex);
+fuegePokemonHinzu(pokedex, "Pikachu", "Elektro", false, ["Donnerschock", "Ruckzuckhieb"]);
+console.log("\n=== Nach dem Hinzufügen eines neuen Pokémon ===");
+zeigeAllePokemons(pokedex);
+fuegePokemonHinzu(pokedex, "Pikachu", "Elektro", false, ["Donnerschock", "Ruckzuckhieb"]);
+
