@@ -47,16 +47,6 @@ function zeigePokemonNachTyp(pokedex, gesuchterTyp) {
         }
     }
 }
-
-// --- Programmstart ---
-console.log("=== Alle Pokémon ===");
-zeigeAllePokemons(pokedex);
-
-console.log("\n=== Nur Shiny Pokémon ===");
-zeigeNurShinyPokemons(pokedex);
-
-console.log("\n=== Pokémon vom Typ Feuer ===");
-zeigePokemonNachTyp(pokedex, "Feuer");
 function fuegeAttackeHinzu(pokemon, neueAttacke) {
     if (!pokemon.attacken.includes(neueAttacke)) {
         pokemon.attacken.push(neueAttacke);
@@ -67,14 +57,6 @@ function fuegeAttackeHinzu(pokemon, neueAttacke) {
         return false;
     }
 }
-
-console.log("=== Vor dem Hinzufügen einer neuen Attacke ==="); 
-zeigePokemon(darkrai);
-fuegeAttackeHinzu(darkrai, "Schattenstoß");
-console.log("\n=== Nach dem Hinzufügen einer neuen Attacke ===");
-zeigePokemon(darkrai);
-fuegeAttackeHinzu(darkrai, "Schattenstoß");
-
 function entferneAttacke(pokemon, attacke) {
     if (pokemon.attacken.includes(attacke)) {
         const index = pokemon.attacken.indexOf(attacke);
@@ -86,9 +68,30 @@ function entferneAttacke(pokemon, attacke) {
         return false;
     }
 }
+
+
+// --- Programmstart ---
+console.log("=== Alle Pokémon ===");
+zeigeAllePokemons(pokedex);
+
+console.log("\n=== Nur Shiny Pokémon ===");
+zeigeNurShinyPokemons(pokedex);
+
+console.log("\n=== Pokémon vom Typ Feuer ===");
+zeigePokemonNachTyp(pokedex, "Feuer");
+
+console.log("=== Vor dem Hinzufügen einer neuen Attacke ==="); 
+zeigePokemon(darkrai);
+fuegeAttackeHinzu(darkrai, "Schattenstoß");
+
+console.log("\n=== Nach dem Hinzufügen einer neuen Attacke ===");
+zeigePokemon(darkrai);
+fuegeAttackeHinzu(darkrai, "Schattenstoß");
+
 console.log("\n=== Vor dem Entfernen einer Attacke ===");
 zeigePokemon(glurak);
 entferneAttacke(glurak, "Sonnentag");
+
 console.log("\n=== Nach dem Entfernen einer Attacke ===");
 zeigePokemon(glurak);
 entferneAttacke(glurak, "Sonnentag");
