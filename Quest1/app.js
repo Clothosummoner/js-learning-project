@@ -75,3 +75,20 @@ console.log("\n=== Nach dem Hinzufügen einer neuen Attacke ===");
 zeigePokemon(darkrai);
 fuegeAttackeHinzu(darkrai, "Schattenstoß");
 
+function entferneAttacke(pokemon, attacke) {
+    if (pokemon.attacken.includes(attacke)) {
+        const index = pokemon.attacken.indexOf(attacke);
+        pokemon.attacken.splice(index, 1);
+        console.log(`Die Attacke "${attacke}" wurde von ${pokemon.name} entfernt.`);
+        return true;
+    } else {
+        console.log(`Die Attacke "${attacke}" ist nicht bei ${pokemon.name} vorhanden.`);
+        return false;
+    }
+}
+console.log("\n=== Vor dem Entfernen einer Attacke ===");
+zeigePokemon(glurak);
+entferneAttacke(glurak, "Sonnentag");
+console.log("\n=== Nach dem Entfernen einer Attacke ===");
+zeigePokemon(glurak);
+entferneAttacke(glurak, "Sonnentag");
