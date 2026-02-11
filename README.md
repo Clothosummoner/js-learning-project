@@ -1,4 +1,4 @@
-# Quest1# Pokémon JavaScript Lernprojekt
+# Pokémon JavaScript Lernprojekt
 
 Dieses Projekt habe ich erstellt, um grundlegende JavaScript-Konzepte zu üben.
 
