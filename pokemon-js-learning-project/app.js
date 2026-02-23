@@ -89,35 +89,4 @@ function fuegePokemonHinzu(pokedex, name, typ, istShiny, attacken) {
 }
 
 
-// --- Programmstart ---
-console.log("=== Alle Pokémon ===");
-zeigeAllePokemons(pokedex);
-
-console.log("\n=== Nur Shiny Pokémon ===");
-zeigeNurShinyPokemons(pokedex);
-
-console.log("\n=== Pokémon vom Typ Feuer ===");
-zeigePokemonNachTyp(pokedex, "Feuer");
-
-console.log("\n=== Vor dem Hinzufügen einer neuen Attacke ==="); 
-zeigePokemon(darkrai);
-fuegeAttackeHinzu(darkrai, "Schattenstoß");
-
-console.log("\n=== Nach dem Hinzufügen einer neuen Attacke ===");
-zeigePokemon(darkrai);
-fuegeAttackeHinzu(darkrai, "Schattenstoß");
-
-console.log("\n=== Vor dem Entfernen einer Attacke ===");
-zeigePokemon(glurak);
-entferneAttacke(glurak, "Sonnentag");
-
-console.log("\n=== Nach dem Entfernen einer Attacke ===");
-zeigePokemon(glurak);
-entferneAttacke(glurak, "Sonnentag");
-console.log("\n=== Vor dem Hinzufügen eines neuen Pokémon ===");
-zeigeAllePokemons(pokedex);
-fuegePokemonHinzu(pokedex, "Pikachu", "Elektro", false, ["Donnerschock", "Ruckzuckhieb"]);
-console.log("\n=== Nach dem Hinzufügen eines neuen Pokémon ===");
-zeigeAllePokemons(pokedex);
-fuegePokemonHinzu(pokedex, "Pikachu", "Elektro", false, ["Donnerschock", "Ruckzuckhieb"]);
 
