@@ -26,18 +26,12 @@ function zeigePokemon(pokemon) {
 }
 
 // --- Logik-Funktionen ---
-function zeigeAllePokemons(pokedex) {
-    for (const pokemon of pokedex) {
-        zeigePokemon(pokemon);
-    }
+function holeAllePokemons() {
+    return pokedex;
 }
 
-function zeigeNurShinyPokemons(pokedex) {
-    for (const pokemon of pokedex) {
-        if (pokemon.istShiny) {
-            zeigePokemon(pokemon);
-        }
-    }
+function holeShinyPokemons() {
+    return pokedex.filter(pokemon => pokemon.istShiny);
 }
 
 function zeigePokemonNachTyp(pokedex, gesuchterTyp) {
