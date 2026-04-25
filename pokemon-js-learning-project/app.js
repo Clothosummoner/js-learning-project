@@ -81,10 +81,9 @@ function fuegePokemonHinzu(pokedex, name, typ, istShiny, attacken) {
         return true;
     
 }
-unlichtBtn.addEventListener("click", function () {
-    const unlichtPokemon = holeAllePokemons().filter(pokemon => pokemon.typ === "Unlicht");
-    renderPokemonListe(unlichtPokemon);
-});
+
+
+
 
 
 

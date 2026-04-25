@@ -5,16 +5,28 @@
     <title>Pokemon App</title>
 </head>
 <body>
-
     <h1>Pokemon App</h1>
 
     <button id="zeigeBtn">Zeige Pokemon</button>
-    <div id="ausgabe"></div>
     <button id="shinyBtn">Nur Shiny anzeigen</button>
     <button id="unlichtBtn">Nur Unlicht anzeigen</button>
 
+    <div id="ausgabe"></div>
+
+    <h2>Neues Pokémon hinzufügen</h2>
+
+    <input id="nameInput" placeholder="Name">
+    <input id="typInput" placeholder="Typ">
+    <input id="attackenInput" placeholder="Attacken (mit Komma)">
+
+    <label>
+        Shiny
+        <input type="checkbox" id="shinyInput">
+    </label>
+
+    <button id="addBtn">Hinzufügen</button>
+
     <script src="app.js"></script>
     <script src="main.js"></script>
-
 </body>
 </html>
