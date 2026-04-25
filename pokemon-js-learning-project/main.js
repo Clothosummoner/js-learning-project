@@ -3,6 +3,7 @@
 const button = document.getElementById("zeigeBtn");
 const shinyBtn = document.getElementById("shinyBtn");
 const ausgabe = document.getElementById("ausgabe");
+const unlichtBtn = document.getElementById("unlichtBtn");
 
 function renderPokemonListe(liste) {
     ausgabe.innerHTML = "";
