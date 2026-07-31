@@ -48,7 +48,8 @@ addBtn.addEventListener("click", function () {
 
     const attacken = attackenInput.value
         .split(",")
-        .map(a => a.trim());
+        .map(a => a.trim())
+        .filter(a => a !== "");
 
     fuegePokemonHinzu(holeAllePokemons(), name, typ, istShiny, attacken);
 
