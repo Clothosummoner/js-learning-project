@@ -82,8 +82,26 @@ function fuegePokemonHinzu(pokedex, name, typ, istShiny, attacken) {
     
 }
 
-
-
-
-
+function suchePokemon(pokedex, name) {
+    for (const pokemon of pokedex) {
+        if (pokemon.name === name) {
+            return pokemon;
+        }
+    }
+    return null;
+}
+function sucheAnzahlPokemonAttacken(pokedex, name) {
+    for (const pokemon of pokedex) {
+        if (pokemon.name === name) {
+            return pokemon.attacken.length;
+        }
+    }
+    return null;
+}
+function allePokemonmit4Attacken(pokedex) {
+    return pokedex.filter(pokemon => pokemon.attacken.length === 4);
+     
+        }
+    
+    return null;
 
